@@ -1,0 +1,25 @@
+{
+  "name": "node-mcpe-anvil",
+  "version": "1.0.0",
+  "description": "LevelDB and NBT storage provider implementation in Node for MCPE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhsjlw/node-mcpe-anvil.git"
+  },
+  "keywords": [],
+  "author": "mhsjlw <mhsjlw@aol.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhsjlw/node-mcpe-anvil/issues"
+  },
+  "homepage": "https://github.com/mhsjlw/node-mcpe-anvil#readme",
+  "dependencies": {
+    "leveldb-mcpe": "^1.0.0",
+    "node-promise-es6": "^0.3.2",
+    "prismarine-nbt": "^1.0.0"
+  }
+}
