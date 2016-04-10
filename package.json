@@ -1,5 +1,5 @@
 {
-  "name": "node-mcpe-anvil",
+  "name": "mcpe-anvil",
   "version": "1.0.0",
   "description": "LevelDB and NBT storage provider implementation in Node for MCPE",
   "main": "index.js",
