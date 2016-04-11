@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/mhsjlw/node-mcpe-anvil#readme",
   "dependencies": {
-    "leveldb-mcpe": "^1.0.0",
+    "leveldb-mcpe": "^1.0.1",
     "node-promise-es6": "^0.3.2",
     "prismarine-nbt": "^1.0.0"
   }

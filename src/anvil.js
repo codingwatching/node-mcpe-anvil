@@ -17,7 +17,7 @@ class Anvil {
   }
 
   loadRaw(x, z, type) {
-    return Promise.resolve(leveldb.get(generateKey(x, z, type).toString()));
+    return Promise.resolve(new Buffer(leveldb.get(generateKey(x, z, type).toString())));
   }
 
   saveRaw(x, z, type, data) {
