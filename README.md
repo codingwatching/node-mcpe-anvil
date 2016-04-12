@@ -13,7 +13,7 @@ Build an anvil: provide loading and saving of chunks in all regions in `path`
 ### Anvil.saveRaw(x, z, type, data)
 Takes an MCPE anvil chunk either terrain (`0x30`), tile entity (`0x31`) or entity data (`0x32`) and saves it to the overworld.
 
-### Anvil.loadRaw(x,z, type)
+### Anvil.loadRaw(x, z, type)
 Returns a promise containing the chunk data at x, z or null if that chunk isn't saved
 
 ### Anvil.saveNetherRaw(x, z, type)
