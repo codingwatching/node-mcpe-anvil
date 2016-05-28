@@ -1,6 +1,7 @@
 'use strict';
 
 var leveldb = require('leveldb-mcpe');
+var Chunk = require('mcpe-chunk');
 
 function generateNetherKey(x, z, type) {
   var buf = new Buffer(13);
@@ -26,11 +27,22 @@ class Anvil {
   }
 
   loadRaw(x, z, type) {
-    return Promise.resolve(new Buffer(leveldb.get(generateKey(x, z, type).toString()),"ascii"));
+    return Promise.resolve(new Buffer(leveldb.get(generateKey(x, z, type).toString()),'ascii'));
+  }
+
+  load(x, z, type) {
+    var chunk = new Chunk();
+    chunk.load(leveldb.get(generateKey(x, z, type).toString()));
+    return Promise.resolve(chunk);
   }
 
   saveRaw(x, z, type, data) {
     leveldb.put(generateKey(x, z, type).toString(), data);
+    return Promise.resolve();
+  }
+
+  save(x, z, type, chunk) {
+    leveldb.put(generateKey(x, z, type).toString(), chunk.dump());
     return Promise.resolve();
   }
 
